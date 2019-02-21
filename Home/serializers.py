@@ -8,7 +8,7 @@ from Home.models import *
 #         fields = ('home_type', 'home_price', 'home_description', 'home_location', 'home_contacts')
 
 
-class SnippetSerializer(serializers.ModelSerializer):
+class HomeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Snippet
-        fields = ('home_type', 'home_price', 'home_description', 'home_location', 'home_contacts')
+        model = Home
+        fields = ('title', 'type', 'price', 'description', 'location', 'contacts')
