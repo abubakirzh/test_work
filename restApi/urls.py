@@ -22,10 +22,7 @@ from Home.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', show_homes),
     path('', include('Home.urls')),
-    path('home/<int:post_id>/', home_detail, name='home_detail'),
-    path('search', search, name="search"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + \
               static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
