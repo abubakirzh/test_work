@@ -7,7 +7,6 @@ class HomeList(generics.ListCreateAPIView):
     queryset = Home.objects.order_by('price')
     # queryset_high_to_low = Home.objects.order_by('price')
     # queryset_flat_only = Home.objects.order_by('type')
-
     serializer_class = HomeSerializer
 
 
